@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/ptw-logo.png" type="image/png">
+    <title>เกี่ยวกับเรา - โรงเรียนไพฑูรย์วิทยา</title>
+    
+    <!-- Google Fonts - Noto Sans Thai + Noto Serif Thai -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Alpine Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+ 
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="./main.js"></script>
+
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body class="font-thai-sans bg-gradient-to-br from-soft-green-50 to-soft-green-100">
+    <!-- Header Placeholder -->
+    <header id="header-placeholder"></header>
+
+    <main class="pt-16">
+        <!-- About Section -->
+        <section id="about" class="py-12 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl md:text-4xl font-thai-serif font-bold text-soft-green-500 mb-4">วิสัยทัศน์</h2>
+                    <div class="w-24 h-1 bg-soft-green-300 mx-auto"></div>
+                </div>
+                <div class="text-center mx-auto w-full px-2 py-6">
+                    <p class="text-xl md:leading-loose text-gray-500 md:px-8">
+                        มุ่งมั่นสร้างสรรค์นักเรียนสู่ความเป็นเลิศ ประเสริฐด้วยคุณธรรม พร้อมพรั่งด้วยจิตอาสา ให้เป็นคนที่มีความสมดุล ทั้งทางด้านร่างกาย ความรู้ มีจิตสำนึก ในความเป็นพลเมืองไทยและเป็นพลโลก ยึดมั่นในการปกครองตามระบอบประชาธิปไตย อันมีพระมหากษัตริย์ ทรงเป็นประมุข ดำรงตนตามเศรษฐกิจ พอเพียง
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Courses Section -->
+        <section id="courses" class="bg-muted/30 py-8" x-data="coursesData()">
+            <div class="container mx-auto px-6">
+                <div x-data="{}" x-intersect="$el.classList.add('fade-in-up')" class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-thai-serif font-bold text-soft-green-500 mb-4">เรียนวันนี้ สำหรับอนาคต</h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                        เพื่อสร้างพื้นฐานการเรียนรู้ที่แข็งแกร่ง และพัฒนาทักษะที่จำเป็นสำหรับอนาคต
+                    </p>
+                </div>
+    
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <template x-for="(course, index) in courses" :key="index">
+                        <div x-data="{}" x-intersect="setTimeout(() => $el.classList.add('fade-in-up'), index * 150)" class="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/30 bg-card rounded-lg">
+                            <div class="aspect-video overflow-hidden">
+                                <img :src="course.image" :alt="course.title" class="h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                            </div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-lg font-bold mb-2" x-text="course.title"></h3>
+                                <p class="text-muted-foreground leading-relaxed" x-text="course.description"></p>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Activities Section -->
+        <section id="activities" class="container mx-auto px-6 pt-8 pb-12" x-data="activitiesData()">
+            <div x-data="{}" x-intersect="$el.classList.add('fade-in-up')" class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-thai-serif font-bold text-soft-green-500 mb-4">กิจกรรมพิเศษ</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                    กิจกรรมสนุกๆ ที่จะทำให้น้องๆ มีความสุขและเรียนรู้สิ่งใหม่ๆ ตลอดปีการศึกษา
+                </p>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-teal-700">
+                <template x-for="(activity, index) in activities" :key="index">
+                    <div x-data="{}" x-intersect="setTimeout(() => $el.classList.add('fade-in-up'), index * 100)" class="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/50 bg-card rounded-lg p-0 overflow-hidden">
+                        <div class="h-fit">
+                            <img :src="activity.image" :alt="activity.title" class="h-56 w-full object-cover z-0">
+                            <div class="bg-white px-2 py-2.5 text-center z-10">
+                                <h3 class="text-lg font-bold mb-1" x-text="activity.title"></h3>
+                                <p class="text-lime-600" x-text="activity.description"></p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <footer id="footer-placeholder"></footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        function coursesData() {
+            return {
+                courses: [
+                    { title: 'คณิตศาสตร์สนุกๆ', description: 'เรียนการคิดคำนวณผ่านเกม และกิจกรรมที่น่าสนใจ', image: 'https://scontent.fbkk13-1.fna.fbcdn.net/v/t39.30808-6/549363397_1395662425898954_8961401222130073737_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=f727a1&_nc_ohc=nLmSCggAdNUQ7kNvwHGQ190&_nc_oc=AdnvtWRnsnUTc3MxBVSFgEzR8s503YjzDInMC2Hka5ZIBkk5GYtW8fwl3Ac5pcwNrifS_AFYCk3Ms77WRo16z0tw&_nc_zt=23&_nc_ht=scontent.fbkk13-1.fna&_nc_gid=2zASOWTYChp5jm6Aiy-BjQ&oh=00_AfY02szaiRj8dIdEwBbbOGlHq30cH3gB1bv_XXQ86x-PVA&oe=68E10186' },
+                    { title: 'สังคมศึกษา', description: 'เรียนรู้การเลือกตั้ง และประชาธิปไตย', image: 'https://scontent.fbkk13-2.fna.fbcdn.net/v/t39.30808-6/509364560_1311466794318518_6210725665137174470_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_ohc=tAqf6Wb3hy0Q7kNvwEM1_i8&_nc_oc=Adl0HuDyu5HzMUZjij1Ya3c72lba-zPuB7VsFhV3lsUazB68QR62-26Uk0HGc4mjBFvFjApZUgt73UiDT_FOs02S&_nc_zt=23&_nc_ht=scontent.fbkk13-2.fna&_nc_gid=7Psge4dlRNgW5F7CoA1uZw&oh=00_AfZ0PKrNr_SBFEGdFiLpieEMNSb6pZPJGmtNWQeKIYeb9g&oe=68E101F1' },
+                    { title: 'การศึกษานอกหลักสูตร', description: 'แสดงออกความคิดสร้างสรรค์ผ่านสีสันและเสียงเพลง', image: 'https://scontent.fbkk12-3.fna.fbcdn.net/v/t39.30808-6/511983141_1322481116550419_1246202096117525614_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f727a1&_nc_ohc=aItQhflRG9kQ7kNvwF804KW&_nc_oc=AdnL9C_qVAWSS2l3JfzutKBi-KYyC5anjET7akyzhNZVs-B4_fy1Yc1m8hqhsljcJ1Cr8kx186Lp8cXEi3L5YQqP&_nc_zt=23&_nc_ht=scontent.fbkk12-3.fna&_nc_gid=C077km5ESvkggLvLYf1VPg&oh=00_AfZt3kfu6-hfsQCMe4ry7VPUU0bkrW7eIxOXVdv45tjCZQ&oe=68E130FE' },
+                    { title: 'วิทยาศาสตร์น่าสนใจ', description: 'สำรวจโลกรอบตัวและทำการทดลองง่ายๆ ที่สนุก', image: 'https://scontent.fbkk12-5.fna.fbcdn.net/v/t39.30808-6/540470166_1373259551472575_2518243275123717566_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_ohc=mJmI-qT0yo4Q7kNvwHmobs4&_nc_oc=AdmvnbMOsMspjBZcY_CsNu5d9eXQuUKWZ0LT7zJgv4Jc4lT6bmdNMNh7a9MUXtaFiUS-sgziZkqOpeBC1MvYHTQ_&_nc_zt=23&_nc_ht=scontent.fbkk12-5.fna&_nc_gid=RZ7ZJBlC7G2kXx_IpOfTwA&oh=00_Afbqhc0sv3UIxriCu1Ln_vRGclbjvOaO6o7KbFwnfX2h2A&oe=68E12472' },
+                    { title: 'การลงมือปฏิบัติ', description: 'เรียนรู้เทคโนโลยีที่เหมาะสมกับวัยและปลอดภัย', image: 'https://scontent.fbkk9-2.fna.fbcdn.net/v/t39.30808-6/536649123_1366811458784051_1031784219404955766_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=f727a1&_nc_ohc=E9qnspk0uVUQ7kNvwHx0V-U&_nc_oc=Adk4wXThcHl_tRb5tLNPQ1DlcYG-fXFQs7VQ4AXd9ti09RVQvj2ogxx78u82R96cagHiPF8f9KBizh9nC0kC3m7z&_nc_zt=23&_nc_ht=scontent.fbkk9-2.fna&_nc_gid=F9X-_NUTYn3ueyL40dNWEw&oh=00_AfYCal3lvTyks9cLZ5a_dB8xV4WPJyJsi9PpH4JcxNmLzw&oe=68E11136' },
+                    { title: 'พลศึกษาและกีฬา', description: 'เสริมสร้างร่างกายแข็งแรงและจิตใจที่ดี', image: 'https://scontent.fbkk12-3.fna.fbcdn.net/v/t39.30808-6/514410385_1347619140703283_7084350155393246078_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f727a1&_nc_ohc=qfXVkaw1sJ0Q7kNvwFKyM1R&_nc_oc=AdllbFNWcN5F2M5ae39v_-QAhiX7dpcTd38hIeHlEbP2Jeu-z7UwE3n3aycdRTQw1PPWvKe6zJi61DB8W_n__89C&_nc_zt=23&_nc_ht=scontent.fbkk12-3.fna&_nc_gid=0JhpePXsjUIOO3lVjsoVSg&oh=00_Afb34IVZ3vqus9jzZn4Uritm9NChpHzZ4VJDwQhsUfSSAw&oe=68E11827' },
+                ]
+            }
+        }
+
+        function activitiesData() {
+            return {
+                activities: [
+                    { title: 'กีฬาสีประจำปี', description: 'แข่งขันกีฬาและเชียร์อย่างสนุกสนาน', image: 'https://scontent.fbkk12-4.fna.fbcdn.net/v/t39.30808-6/555523669_1403363255128871_4668408232372011118_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=f727a1&_nc_ohc=NBmG_UWTqu0Q7kNvwEUbZ0Y&_nc_oc=Adl-fvV0OzjmApih-nV_BpfyUVrdHRW72FDJtWn9hRxePPOvgOa_OfIMqjggOLRfEUTXKC3CEBwJtVWLllRM5ue0&_nc_zt=23&_nc_ht=scontent.fbkk12-4.fna&_nc_gid=y1MzbCzfzwnFwYqJiRakXA&oh=00_Afa1FBNhSBi9qM8ptvKpfgOmUlVQMy98ZYqh_AAla1tBZQ&oe=68E121C7' },
+                    { title: 'หยุดภัยยาเสพติด', description: 'ส่งเสริมพลังต้านภัยยาเสพติด', image: 'https://scontent.fbkk12-6.fna.fbcdn.net/v/t39.30808-6/511847273_1318135756984955_7464687916239782310_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_ohc=TwZ1E4onZD8Q7kNvwHwTaxO&_nc_oc=Adkr33SuJ9ITfiWmsqOjEEp2l01UiTfAcU2Mgocl5aEteR9NTJx9KLyXxVtaI4fkxYmVsm-zy3ACZIReQNouYfmz&_nc_zt=23&_nc_ht=scontent.fbkk12-6.fna&_nc_gid=rUEQq0to8yhvX-pi1Bd6eA&oh=00_AfaRi03TB2YrOohI_i6JagP-PQ9BDQVmrrQbQ_5ex-JOyQ&oe=68E11D3F' },
+                    { title: 'วันรักการอ่าน', description: 'ส่งเสริมนิสัยรักการอ่านหนังสือ', image: 'https://scontent.fbkk12-5.fna.fbcdn.net/v/t39.30808-6/509385781_1311408724324325_1397007181326488022_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_ohc=T4fS7y09VU0Q7kNvwEPp8pV&_nc_oc=Adk3VLD5Tb6Z47WKvllvg8LueJGN4CA7-MWFNC1Li6cCd8-NUgQW7m1_2CC1Pc2jXBkHBkK8sL9scLoaPBbp9MtL&_nc_zt=23&_nc_ht=scontent.fbkk12-5.fna&_nc_gid=-NitjXt-u7LSiKXzwgTD-g&oh=00_AfZQ_MQm3cT_xZ2szgfY_07j9W5lRgaEnsIqZlZ1jqdNWA&oe=68E119ED' },
+                    { title: 'โครงการรักษ์สิ่งแวดล้อม', description: 'เรียนรู้การดูแลโลกใบนี้', image: 'https://scontent.fbkk13-1.fna.fbcdn.net/v/t39.30808-6/514102833_1319983776800153_268811555813739685_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=f727a1&_nc_ohc=3M2yg9AdtfkQ7kNvwF62aJ4&_nc_oc=Adk5WeWVV_nALVqfEaog7nMFA1-cq3nB2-qFNlEN6QsXXUvrPP4Jf4wgvVgo65nSOOJF74-CoWxAO9F2jTx7liFl&_nc_zt=23&_nc_ht=scontent.fbkk13-1.fna&_nc_gid=tm0usy1n7j531RdHnfvjEw&oh=00_AfZBRQy2mca97xWBo_eJg3iKUq6u3-fMWqrzR_MaMHOV4g&oe=68E13584' },
+                ]
+            }
+        }
+    </script>
+
+</body>
+
+</html>

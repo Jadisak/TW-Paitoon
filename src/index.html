@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/ptw-logo.png" type="image/png">
+    <title>เกี่ยวกับเรา - โรงเรียนไพฑูรย์วิทยา</title>
+    
+    <!-- Google Fonts - Noto Sans Thai + Noto Serif Thai -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Alpine Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+ 
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="./main.js"></script>
+
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body class="font-thai-sans bg-gradient-to-br from-soft-green-50 to-soft-green-400">
+    <!-- Header Placeholder -->
+    <header id="header-placeholder"></header>
+
+    <!-- Hero Section -->
+        <section id="home" class="max-w-6xl mx-auto px-2 pb-12 md:px-8">
+            <div class="h-20"></div>
+            <div x-data="{
+                currentSlide: 0,
+                slides: [
+                    {
+                        title: 'ครูผู้สอนมืออาชีพ',
+                        subtitle: 'ทีมครูที่มีประสบการณ์และความเชี่ยวชาญ',
+                        image: 'https://scontent.fbkk13-3.fna.fbcdn.net/v/t39.30808-6/519399463_1340192434779287_7243918256130915162_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_ohc=t6Ww4nmilgAQ7kNvwHxPari&_nc_oc=AdlpXN__nV1oz1-yRFS4yCWn4oqQQlPRgoJI5lTmNBdiL2EOxxJfYFO1FPKsG0hUBLY9B6bQSG2QZqll7kiTcSDG&_nc_zt=23&_nc_ht=scontent.fbkk13-3.fna&_nc_gid=1azREIfnaGBTCQgRW0WRwg&oh=00_Afa1kuNBOLwwdf5ngZpFZbTf6PnrLg72KFgBPBldnVtYgg&oe=68E07B0D'
+                    },
+                    {
+                        title: 'สภาพแวดล้อมและการเรียนรู้',
+                        subtitle: 'บรรยากาศที่ปลอดภัยและเหมาะสมสำหรับการศึกษา',
+                        image: 'https://scontent.fbkk8-4.fna.fbcdn.net/v/t39.30808-6/515438218_1373259648139232_5675633078396246851_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=f727a1&_nc_ohc=YF86Y52xxMwQ7kNvwGx7FGz&_nc_oc=AdlsHwdrzBIvFVsgc6p5QR0aXvm55dQr7msmMOc6cIvAvAIbjTPO7AcnHhlssIMwD8t2BB0NvfJnoqHn9_drYi-Y&_nc_zt=23&_nc_ht=scontent.fbkk8-4.fna&_nc_gid=LITIK21xXhPG8OnxzMDJLA&oh=00_AfbzWWKaXCgTP28ykNL85ER9_iX4KLhb33AoWUg4ER45dg&oe=68E060E9'
+                    },
+                    {
+                        title: 'รางวัลความสำเร็จของนักเรียน',
+                        subtitle: 'ผลงานการฝึกสอน และผลสัมฤทธิ์',
+                        image: 'https://scontent.fbkk12-2.fna.fbcdn.net/v/t39.30808-6/528538724_1353058833492647_7865963215018030676_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Ma-V18yyNbQQ7kNvwG8Eo7A&_nc_oc=AdmmR7o3l4eO0ecdQbNiK5xrEBsg7Fd9jpafvLPJBa8tYKGpBQmCC_JPicUPYpUxmqYC_GFHd5QTzFXELhbAUTZV&_nc_zt=23&_nc_ht=scontent.fbkk12-2.fna&_nc_gid=YvFNAxN5FPc1eCQ0O7pBjA&oh=00_AfYzkWFg8-6OtcfruKuuM_IO_KDcQyn_yUqpX_hbfrVS6A&oe=68E074B7'
+                    },
+                    {
+                        title: 'แนวทางสงบสร้างสมาธิ',
+                        subtitle: 'พื้นฐานการเรียนรู้ที่เน้นการพัฒนาจิตใจ',
+                        image: 'https://scontent.fbkk8-2.fna.fbcdn.net/v/t39.30808-6/514415575_1329881195810411_593544838716740920_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f727a1&_nc_ohc=co4MXWr6ktsQ7kNvwFoc-xm&_nc_oc=AdmkKuQ39kod_avRZeb-uP0j0l8VLrFjYoUxsyHYUcLqXmDxgjxCjooTw5e9JwTqbvbYCrP4Fs0L400ZpVlNfzZu&_nc_zt=23&_nc_ht=scontent.fbkk8-2.fna&_nc_gid=u_GbYFCIZsDVY5C5wZq5lA&oh=00_AfarTvFQJQf1YvB4E_RENc9KFMfqOrGjBXIbN2pflakaxw&oe=68E12CF6'
+                    },
+                    {
+                        title: 'ความภาคภูมิใจของโรงเรียน',
+                        subtitle: 'ผลงานและความภาคภูมิของโรงเรียน',
+                        image: 'https://scontent.fbkk13-3.fna.fbcdn.net/v/t39.30808-6/556959908_1405224471609416_6008426322939160686_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_ohc=Yb4XtPxvj8MQ7kNvwG5VXoE&_nc_oc=AdlY0aHhwXxJPjseWgivSPTWrmsUATQoes0pdZHg3jMCq4EYuul-i0h26cywGi9Amof2yCM6c-WhQ-31ccLGaCds&_nc_zt=23&_nc_ht=scontent.fbkk13-3.fna&_nc_gid=jTle85m5d-ab_9d9C4h_FA&oh=00_Afal6spfenC4E4PUSJ2lB4JbxHWHSd2IfmmFQsUYtxXs0A&oe=68E11DC4'
+                    }
+                ],
+                autoplay: null,
+                init() {
+                    this.startAutoplay();
+                },
+                startAutoplay() {
+                    this.autoplay = setInterval(() => {
+                        this.next();
+                    }, 5000);
+                },
+                stopAutoplay() {
+                    if (this.autoplay) {
+                        clearInterval(this.autoplay);
+                    }
+                },
+                next() {
+                    this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+                },
+                prev() {
+                    this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+                },
+                goToSlide(index) {
+                    this.currentSlide = index;
+                }
+            }"
+            @mouseenter="stopAutoplay()"
+            @mouseleave="startAutoplay()"
+            class="relative h-[85vh]  md:h-[55vh] overflow-hidden rounded-2xl shadow-lg">
+                
+                <!-- Slides -->
+                <div class="relative h-full w-full">
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <div x-show="currentSlide === index"
+                            x-transition:enter="transition-all ease-in-out duration-700"
+                            x-transition:enter-start="opacity-0 transform scale-105"
+                            x-transition:enter-end="opacity-100 transform scale-100"
+                            x-transition:leave="transition-all ease-in-out duration-700"
+                            x-transition:leave-start="opacity-100 transform scale-100"
+                            x-transition:leave-end="opacity-0 transform scale-95"
+                            class="absolute inset-0">
+                            <div class="relative h-full w-full">
+                                <img :src="slide.image" :alt="slide.title" class="h-full w-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-r from-green-600/80 sm:from-20% sm:to-40%"></div>
+                                
+                                <!-- Content -->
+                                <div class="absolute inset-0 flex items-center">
+                                    <div class="container mx-auto p-6">
+                                        <div class="max-w-3xl text-white">
+                                            <h1 x-show="currentSlide === index"
+                                                x-transition:enter="transition-all ease-out duration-1000 delay-300"
+                                                x-transition:enter-start="opacity-0 transform translate-y-8"
+                                                x-transition:enter-end="opacity-100 transform translate-y-0"
+                                                class="mb-4 text-4xl font-bold leading-tight md:text-6xl drop-shadow-[4px_4px_4px_rgba(0,0,0,1)]"
+                                                x-text="slide.title"></h1>
+                                            <p x-show="currentSlide === index"
+                                            x-transition:enter="transition-all ease-out duration-1000 delay-500"
+                                            x-transition:enter-start="opacity-0 transform translate-y-8"
+                                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                                            class="text-base text-white drop-shadow-[2px_2px_2px_rgba(0,0,0,1)] md:text-xl"
+                                            x-text="slide.subtitle"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button @click="prev()" class="absolute left-4 bottom-5 -translate-y-1/2 bg-white/20 text-white backdrop-blur-sm hover:bg-white/30 p-2 rounded-full">
+                    <i data-lucide="chevron-left" class="h-10 w-10"></i>
+                </button>
+                <button @click="next()" class="absolute right-4 bottom-5 -translate-y-1/2 bg-white/20 text-white backdrop-blur-sm hover:bg-white/30 p-2 rounded-full">
+                    <i data-lucide="chevron-right" class="h-10 w-10"></i>
+                </button>
+
+                <!-- Dots Indicator -->
+                <div class="absolute bottom-6 left-1/2 flex -translate-x-1/2 space-x-3">
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <button @click="goToSlide(index)"
+                                class="h-3.5 w-3.5 rounded-full transition-all duration-300"
+                                :class="currentSlide === index ? 'bg-yellow-400 scale-125' : 'bg-white/70 hover:bg-green-300'"></button>
+                    </template>
+                </div>
+            </div>
+        </section>
+    
+    <!-- Footer Placeholder -->
+    <footer id="footer-placeholder" class=""></footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>

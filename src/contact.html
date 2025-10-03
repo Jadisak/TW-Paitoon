@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/ptw-logo.png" type="image/png">
+    <title>เกี่ยวกับเรา - โรงเรียนไพฑูรย์วิทยา</title>
+    
+    <!-- Google Fonts - Noto Sans Thai + Noto Serif Thai -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Alpine Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+ 
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="./main.js"></script>
+
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body class="font-thai-sans bg-gradient-to-br from-soft-green-100 to-soft-green-300">
+    <!-- Header Placeholder -->
+    <header id="header-placeholder"></header>
+
+    <main class="pt-0">
+        <!-- Contact Section with Alpine.js -->
+        <section id="contact" class="max-w-5xl mx-auto pb-12 pt-24 bg-white/50 overflow-x-hidden">
+            <div class="mx-auto px-1 sm:px-4 lg:px-16">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl md:text-4xl font-thai-serif font-bold text-soft-green-500 mb-4">ติดต่อเรา</h2>
+                    <div class="w-24 h-1 bg-soft-green-300 mx-auto"></div>
+                </div>
+
+                <div x-data="{ showSuccess: false }" class="grid md:grid-cols-2 gap-8 px-2 sm:px-12">
+                    <!-- Contact Info -->
+                    <div class="xflex justify-between gap-8">
+                        <h3 class="text-2xl text-soft-green-400 mb-6 text-nowrap">ข้อมูลการติดต่อ</h3>
+                        <div class="space-y-6 left-12 lg:left-0">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-soft-green-500 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-soft-green-500">ที่อยู่</h4>
+                                    <p class="text-gray-600">เลขที่ 230 ถนนพระพายัพ<br>ตำบลแก่งคอย อำเภอแก่งคอย<br>จังหวัดสระบุรี 18110</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-soft-green-500 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-soft-green-500">โทรศัพท์</h4>
+                                    <p class="text-gray-600">036-244-170</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-soft-green-500 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2h4a1 1 0 011 1v1a1 1 0 01-1 1h-1v11a2 2 0 01-2 2H6a2 2 0 01-2-2V7H3a1 1 0 01-1-1V5a1 1 0 011-1h4z"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-soft-green-500">โทรสาร</h4>
+                                    <p class="text-gray-600">036-244-215</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-soft-green-500 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-semibold text-soft-green-500">อีเมล</h4>
+                                    <p class="text-gray-600">paitoowittaya.sri@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-green-100 col-span-1 p-3 sm:p-6 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl text-soft-green-400 mb-3">ส่งข้อความถึงเรา</h3>
+
+                        <form id="contactForm"
+                                action="https://docs.google.com/forms/d/e/1FAIpQLScR8ZV4Z9OrOV3vJeXKQIRvrPBwafJ4edOnL5NSGT1p0XWuFA/formResponse" 
+                                method="POST" 
+                                target="hidden_iframe" 
+                                @submit.prevent="document.getElementById('contactForm').submit(); showSuccess = true; setTimeout(() => document.getElementById('contactForm').reset(), 100)"
+                                class="space-y-1">
+
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-400 mt-3 mb-1">ชื่อ-นามสกุล *</label>
+                                <input type="text" name="entry.1010078776" id="name" required 
+                                    class="w-full px-4 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-soft-green-500">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-400 mt-3 mb-1">อีเมล *</label>
+                                <input type="email" name="entry.449232488" id="email" required 
+                                    class="w-full px-4 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-soft-green-500">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-400 mt-3 mb-1">เบอร์โทรศัพท์</label>
+                                <input type="tel" name="entry.1049073667" id="phone" 
+                                    class="w-full px-4 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-soft-green-500">
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-400 mt-3 mb-1">หัวข้อ *</label>
+                                <input type="text" name="entry.1976351853" id="subject" required 
+                                    class="w-full px-4 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-soft-green-500">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-400 mt-3 mb-1">ข้อความ *</label>
+                                <textarea name="entry.1998515122" id="message" rows="4" required
+                                    class="w-full px-4 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-soft-green-500 resize-none bg-white mb-2"></textarea>
+                            </div>
+
+                            <button type="submit" 
+                                class="w-full bg-soft-green-600 hover:bg-soft-green-500 text-white px-6 py-3 rounded-xl font-medium transition-all">
+                            ส่งข้อความ
+                            </button>
+                        </form>
+
+                        <!-- hidden iframe เพื่อป้องกัน redirect หลังส่ง -->
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                    </div>
+
+                    <!-- Success Modal -->
+                    <div x-show="showSuccess" 
+                         x-transition:enter="transition ease-out duration-300"
+                         x-transition:enter-start="opacity-0"
+                         x-transition:enter-end="opacity-100"
+                         x-transition:leave="transition ease-in duration-300"
+                         x-transition:leave-start="opacity-100"
+                         x-transition:leave-end="opacity-0"
+                         class="fixed inset-0 h-screen flex items-center justify-center bg-black bg-opacity-50 z-50"
+                         style="display: none;">
+                        <div @click.away="showSuccess = false" 
+                             x-show="showSuccess"
+                             x-transition:enter="transition ease-out duration-300"
+                             x-transition:enter-start="opacity-0 scale-95"
+                             x-transition:enter-end="opacity-100 scale-100"
+                             x-transition:leave="transition ease-in duration-200"
+                             x-transition:leave-start="opacity-100 scale-100"
+                             x-transition:leave-end="opacity-0 scale-95"
+                             class="bg-white rounded-2xl shadow-lg max-w-sm w-full p-6 text-center">
+                            <h2 class="text-2xl font-bold text-green-600 mb-4">ส่งข้อความสำเร็จ!</h2>
+                            <p class="text-gray-600 mb-6">ขอบคุณที่ติดต่อเรา เราจะตอบกลับโดยเร็วที่สุด</p>
+                            <button @click="showSuccess = false" class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg transition">
+                            ปิด
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <footer id="footer-placeholder"></footer>
+
+    <script> lucide.createIcons(); </script>
+
+</body>
+
+</html>

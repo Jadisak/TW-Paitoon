@@ -1,0 +1,36 @@
+<nav class="fixed top-0 w-full z-50 mb-12 bg-gradient-to-b from-white sm:from-[60px] from-[90px] to-70%" x-data="{ isOpen: false }">
+    <div class="max-w-6xl mx-auto pt-2 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="flex justify-between items-center h-12">
+            <a href="./index.html" class="flex items-center relative">
+                <div class="w-20 md:w-[6.5rem]"></div>
+                <img src="./assets/ptw-logo.png" alt="Paitoon Wittaya School Logo" class="absolute -top-4 left-0 w-[70px] md:w-[90px] object-contain z-10">
+                <h1 class="text-2xl font-thai-serif font-bold text-green-600"> <span class="text-lime-500/80 pr-0.5">โรงเรียน</span>ไพฑูรย์วิทยา</h1>
+            </a>
+            <div class="hidden lg:block">
+                <div id="nav-links" class="ml-10 flex items-baseline space-x-4">
+                    <a href="./index.html" class="nav-link text-lime-500 xhover:text-teal-600 px-3 py-2 text-lg font-medium transition-colors duration-700">หน้าหลัก</a>
+                    <a href="./about.html" class="nav-link text-lime-500 xhover:text-teal-600 px-3 py-2 text-lg font-medium transition-colors duration-700">เกี่ยวกับเรา</a>
+                    <a href="./video.html" class="nav-link text-lime-500 xhover:text-teal-600 px-3 py-2 text-lg font-medium transition-colors duration-700">วิดีโอ</a>
+                    <a href="./contact.html" class="nav-link text-lime-500 xhover:text-teal-600 px-3 py-2 text-lg font-medium transition-colors duration-700">ติดต่อเรา</a>
+                    <a href="./location.html" class="nav-link text-lime-500 xhover:text-teal-600 px-3 py-2 text-lg font-medium transition-colors duration-700">ที่ตั้ง</a>
+                </div>
+            </div>
+            <div class="lg:hidden">
+                <button @click="isOpen = !isOpen" class="text-soft-green-500 hover:text-soft-green-600 focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div x-show="isOpen" class="lg:hidden duration-700 w-[240px] mx-auto" id="mobile-nav-links">
+        <div class="text-center font-light space-y-1 pt-4 flex flex-col relative">
+            <a href="./index.html" class="nav-link text-white hover:text-yellow-300 px-3 pt-1.5 py-0.5 rounded-t-xl text-lg font-medium transition-colors duration-700 bg-green-600 hover:border-x-4 border-lime-400">หน้าหลัก</a>
+            <a href="./about.html" class="nav-link text-white hover:text-yellow-300 px-3 pt-1.5 py-0.5 text-lg font-medium transition-colors duration-700 bg-green-600 hover:border-x-4 border-lime-400">เกี่ยวกับเรา</a>
+            <a href="./video.html" class="nav-link text-white hover:text-yellow-300 px-3 pt-1.5 py-0.5 text-lg font-medium transition-colors duration-700 bg-green-600 hover:border-x-4 border-lime-400">วิดีโอ</a>
+            <a href="./contact.html" class="nav-link text-white hover:text-yellow-300 px-3 pt-1.5 py-0.5 text-lg font-medium transition-colors duration-700 bg-green-600 hover:border-x-4 border-lime-400">ติดต่อเรา</a>
+            <a href="./location.html" class="nav-link text-white hover:text-yellow-300 px-3 pt-1.5 py-0.5 rounded-b-xl text-lg font-medium transition-colors duration-700 bg-green-600 hover:border-x-4 border-lime-400">ที่ตั้ง</a>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/ptw-logo.png" type="image/png">
+    <title>เกี่ยวกับเรา - โรงเรียนไพฑูรย์วิทยา</title>
+    
+    <!-- Google Fonts - Noto Sans Thai + Noto Serif Thai -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Alpine Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+ 
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="./main.js"></script>
+
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body class="font-thai-sans bg-gradient-to-br from-soft-green-50 to-soft-green-100">
+    <!-- Header Placeholder -->
+    <header id="header-placeholder"></header>
+
+    <main class="pt-16">
+        <!-- Video Section -->
+        <section id="video" class="py-12 bg-soft-green-50">
+            <div class="max-w-7xl mx-auto xpx-4 xsm:px-6 xlg:px-8">
+                <div class="text-center mb-6">
+                    <h2 class="text-3xl md:text-4xl font-thai-serif font-bold text-soft-green-500 mb-4">วิดีโอแนะนำโรงเรียน</h2>
+                    <div class="w-24 h-1 bg-soft-green-300 mx-auto mb-4"></div>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white px-2 rounded-2xl shadow-lg">
+                        <div class="relative aspect-video rounded-xl overflow-hidden shadow-lg">
+                            <iframe 
+                                width="100%" 
+                                height="100%" 
+                                src="https://www.youtube.com/embed/Av9hMG8ZTmo" 
+                                title="open house | Paitoonwittaya school | 10" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen
+                                class="rounded-xl">
+                            </iframe>
+                        </div>
+                        <div class="py-6 text-center">
+                            <h3 class="text-xl font-thai-serif font-semibold text-soft-green-500 mb-1">งานเปิดบ้านโรงเรียนไพฑูรย์วิทยา</h3>
+                            <p class="text-gray-600">ชมบรรยากาศการเรียนการสอนและกิจกรรมต่างๆ ของโรงเรียน</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <footer id="footer-placeholder"></footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>
